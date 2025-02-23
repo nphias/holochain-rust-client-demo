@@ -26,7 +26,11 @@ It will also bring up the Holochain Playground for advanced introspection of the
 
 ## Running the client
 once code has been cmompiled and the conductor is started, you will be able to see the adminsocket port number for the conductor
-copy this and execute the command './zome_client.bin <port>'
+copy this and execute the command:
+
+```bash
+./zome_client.bin <port>
+``` 
 the zome_client binary is located in the root workdir alongside the happ.yml 
 
 ## Running the backend tests
