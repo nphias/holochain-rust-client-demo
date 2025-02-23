@@ -1,0 +1,24 @@
+[profile.dev]
+opt-level = "z"
+
+[profile.release]
+opt-level = "z"
+
+[workspace]
+members = ["dnas/*/zomes/coordinator/*", "dnas/*/zomes/integrity/*","zome-client"]
+resolver = "2"
+
+#[patch.crates-io]
+#coordinator_zomes = { path = "dnas/*/zomes/coordinator/*" }
+#integrity_zomes = { path = "dnas/*/zomes/integrity/*" }
+
+[workspace.dependencies]
+hdi = "=0.6.0-dev.14"
+hdk = "=0.5.0-dev.17"
+serde = "1.0"
+
+[workspace.dependencies.hello_world]
+path = "dnas/hello_world/zomes/coordinator/hello_world"
+
+[workspace.dependencies.hello_world_integrity]
+path = "dnas/hello_world/zomes/integrity/hello_world"
